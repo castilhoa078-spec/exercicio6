@@ -1,220 +1,196 @@
-/* Cor de fundo da página */
+/* --- Estilos Gerais --- */
 body {
-    background-color: #eeeeee;
+    background-color: #eef2f5;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
 }
 
-/* Div principal */
 .container {
     width: 960px;
-    margin: auto;
-    background-color: white;
+    margin: 30px auto;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-/* Cabeçalho e rodapé */
+/* --- Cabeçalho e Rodapé --- */
 header,
 footer {
     background-color: #b30000;
-    color: white;
-    padding: 20px;
+    color: #ffffff;
+    padding: 25px;
     text-align: center;
 }
 
-/* Título principal */
 header h1 {
-    font-size: 42px;
-    margin: 0;
-}
-
-/*
-    Você pode escolher e baixar a fonte que quiser.
-    Depois de baixar, coloque o arquivo dentro da pasta "fontes".
-    
-    Exemplo:
-
-    @font-face {
-        font-family: "MinhaFonte";
-        src: url("fontes/MinhaFonte.woff2");
-    }
-
-    Depois use:
-    font-family: "MinhaFonte", sans-serif;
-*/
-
-header h1 {
+    font-size: 38px;
+    margin: 0 0 8px 0;
     font-family: Georgia, serif;
+    letter-spacing: 1px;
 }
 
-/* Menu */
+header p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* --- Menu de Navegação --- */
 nav {
-    background-color: #222222;
-    padding: 15px;
+    background-color: #1a1a1a;
+    padding: 0;
     text-align: center;
 }
 
 nav a {
-    color: white;
-    margin: 0 20px;
-    font-weight: bold;
+    display: inline-block;
+    color: #ffffff;
+    padding: 15px 25px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Retira o sublinhado dos links */
 a {
     text-decoration: none;
 }
 
-/*
-    A propriedade text-decoration controla decorações
-    aplicadas ao texto, como sublinhado, linha sobre o texto
-    ou linha atravessando o texto.
-*/
-
-/* Efeito quando o mouse passa sobre o link */
-a:hover {
-    color: #ffcc00;
+nav a:hover {
+    background-color: #b30000;
+    color: #ffffff;
 }
 
-/* Conteúdo */
+/* --- Conteúdo --- */
 section {
-    padding: 20px;
+    padding: 35px 40px;
 }
 
 section h2 {
     color: #b30000;
-    font-size: 30px;
+    font-size: 26px;
+    margin-top: 10px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
 }
 
 section p {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444444;
 }
 
-/* Imagem principal */
+/* Imagem Principal da Home */
 #imagem-principal {
-    width: 960px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 880px;
+    height: auto;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 25px auto;
+    border-radius: 6px;
 }
 
-/* Rodapé */
-footer {
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 5px;
-}
+/* --- Estilo Avançado da Tabela --- */
 table {
     width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #ffffff;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e1e1e1;
 }
 
 table th {
     background-color: #b30000;
     color: #ffffff;
-    padding: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
     text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 table td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 15px;
     vertical-align: middle;
 }
 
-table img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr:nth-child(even) {
+    background-color: #fcfcfc;
 }
 
 table tr:hover {
-    background-color: #f5f5f5;
+    background-color: #f1f5f9;
 }
 
-/* --- Estilo do Formulário de Contato --- */
+table img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+/* --- Estilo Avançado do Formulário --- */
 form {
     max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    margin: 20px 0;
 }
 
-label {
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #222222;
-}
-
-input[type="text"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: inherit;
-}
-
-/* Efeito ao clicar/focar no campo */
-input[type="text"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-    background-color: #e0f7fa;
-    border-color: #b30000;
-    outline: none;
-}
-
-button[type="submit"] {
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #b30000;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #800000;
-}
-/* Ajuste de formulário e foco */
 form div {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222222;
+    font-size: 15px;
 }
 
 input[type="text"],
 input[type="tel"],
 textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 12px 14px;
+    border: 1.5px solid #cccccc;
+    border-radius: 6px;
     box-sizing: border-box;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Evento focus solicitado pelo exercício */
+/* Destaque no foco (exigido no exercício) */
 input[type="text"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
     background-color: #e0f7fa;
+    border-color: #00838f;
+    box-shadow: 0 0 5px rgba(0, 131, 143, 0.3);
     outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 4px 0;
 }
